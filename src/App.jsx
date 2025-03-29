@@ -2,6 +2,7 @@ import { useState } from "react";
 import { InputBox } from "./components";
 import useCurrencyInfo from "./hooks/useCurrencyInfo.js";
 import img from "./assets/premium_photo.avif";
+import Navbar from "./components/Navbar.jsx";
 
 // import "./App.css";
 
@@ -31,6 +32,7 @@ function App() {
   let BackgroundImage = img;
   return (
     <>
+    <Navbar />
       <div
         className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
         style={{
@@ -55,7 +57,7 @@ function App() {
                   onAmountchange={(amount) => setAmount(amount)}
                 />
               </div>
-              <div className="relative w-full h-0.5">
+              <div className="relative w-full h-0.5 ">
                 <button
                   type="button"
                   className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
